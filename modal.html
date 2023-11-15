@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/lib/css_bootstrap.min.css">
+</head>
+<body>
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exemplo-modal">
+        Abrir modal
+    </button>
+    <div class="modal" id="exemplo-modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Titulo da modal</h5>
+                    <button data-bs-dismiss="modal" class="btn-close" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, facere iusto ab vero, nam voluptate error repellendus cum ut fugiat tempore nemo maiores et doloremque obcaecati molestiae omnis nobis quis.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-success" data-bs-dismiss="modal">Aceitar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/lib/js_bootstrap.bundle.min.js"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function(){
+    const modalExemplo = new bootstrap.Modal(document.getElementById('exemplo-modal'));
+    modalExemplo.show();
+
+    setTimeout(function () {
+        modalExemplo.hide(); // Use hide() instead of show() to close the modal
+    }, 3000);
+});
+
+    </script>
+</body>
+</html>
